@@ -23,7 +23,6 @@ services:
     volumes:
       - './config:/config'
       - './scripts/setup-kibana.sh:/usr/local/bin/setup-kibana.sh:ro'
-      - './config/ssl/ca/ca.crt:/usr/share/kibana/config/ca/ca.crt'
     depends_on: ['elasticsearch']
     networks: ['stack']
 
@@ -36,6 +35,5 @@ services:
     volumes:
       - './config:/config'
       - './scripts/setup-logstash.sh:/usr/local/bin/setup-logstash.sh:ro'
-      - './config/ssl/ca/ca.crt:/usr/share/logstash/config/ca/ca.crt'
     depends_on: ['elasticsearch']
     networks: ['stack']
