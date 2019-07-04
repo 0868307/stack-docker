@@ -17,4 +17,4 @@ before_install:
 - sysctl -w vm.max_map_count=262144
 - docker-compose down
 - docker-compose -f setup.yml up
-- docker-compose up -d
+- docker-compose up -d --build 
